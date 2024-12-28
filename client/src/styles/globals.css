@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root,
+  .app {
+    font-family: var(--font-inter), sans-serif;
+    height: 100vh;
+    width: 100%;
+    @apply font-inter text-base;
+  }
+
+  html {
+    --font-inter: "Inter", sans-serif;
+  }
+
+  :root {
+    --color-primary: #040d12; /* Deep Blue - Primary background */
+    --color-dark: #021526; /* Darker Blue - Headers or accents */
+    --color-secondary: #f2f8ff; /* Light Blue - Secondary background */
+    --color-main: #3b82f6; /* Bright Blue - Buttons, links */
+
+    /* Accent Colors */
+    --color-accent-green: #22c55e; /* Success - Actions completed */
+    --color-accent-orange: #f97316; /* Warning - Pending actions */
+    --color-accent-red: #ef4444; /* Error - Issues or alerts */
+
+    /* Text Colors */
+    --color-text-primary: #1f2937; /* Dark Gray - Main text */
+    --color-text-secondary: #4b5563; /* Medium Gray - Subtext */
+    --color-text-inverse: #ffffff; /* White - Text on dark backgrounds */
+
+    /* Background Colors */
+    --color-bg-light: #f9fafb; /* Light Gray - General light background */
+    --color-bg-dark: #111827; /* Deep Gray - Modal backgrounds */
+    --color-bg-hover: #e5e7eb; /* Hover - Light gray for button hover effects */
+
+    /* Border Colors */
+    --color-border: #d1d5db; /* Light Gray - Component borders */
+    --color-border-dark: #374151; /* Dark Gray - Borders for dark backgrounds */
+
+    /* Shadows */
+    --color-shadow-light: rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    --color-shadow-dark: rgba(0, 0, 0, 0.3); /* Stronger shadow for modals */
+
+    /* Additional Utility Colors */
+    --color-highlight: #fde047; /* Yellow - Important highlights */
+    --color-muted: #9ca3af; /* Gray - Muted text or icons */
+    --color-info: #0ea5e9; /* Sky Blue - Information alerts */
+  }
+
+  h1 {
+    @apply text-5xl font-semibold leading-tight;
+  }
+
+  h2 {
+    @apply text-4xl font-bold leading-snug;
+  }
+
+  h3 {
+    @apply text-3xl font-semibold leading-snug;
+  }
+
+  h4 {
+    @apply text-xl font-medium leading-snug;
+  }
+
+  h5 {
+    @apply text-lg font-medium leading-snug;
+  }
+
+  h6 {
+    @apply text-base font-medium leading-snug;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+@layer utilities {
+  .page {
+    @apply lg:p-6 xl:p-4;
+  }
+
+  .padding {
+    @apply px-4 py-5;
+  }
+
+  .center {
+    @apply flex items-center justify-center;
+  }
+
+  .opacityBg {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.05), transparent);
+  }
+}
+
+.cl-internal-1dauvpw,
+.cl-userButtonPopoverFooter {
+  display: none;
+}
+
+.cl-userButtonPopoverCard {
+  background-color: var(--color-secondary);
+}
+
+.cl-button {
+  background-color: var(--color-main);
+  color: black;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+.cl-internal-1pr5xvn {
+  text-transform: uppercase;
+  color: var(--color-main);
+}
+
+.cl-rootBox {
+  @apply rounded-xl border-2 border-blue-500;
+}
