@@ -44,11 +44,11 @@ const plans = [
 
 const PaymentCard = () => {
   return (
-    <section className="my-5 grid w-full grid-cols-3 gap-6">
+    <section className="mx-auto my-5 grid grid-cols-3 gap-6">
       {plans.map((plan, index) => (
         <Card
           key={index}
-          className="max-h-auto inline-flex w-full max-w-[20rem] flex-col hover:scale-105 transition-transform duration-300"
+          className="max-h-auto mx-auto inline-flex w-full max-w-[20rem] flex-col transition-transform duration-300 hover:scale-105"
         >
           <section className="w-full p-4">
             <div className="inline-flex min-h-[12rem] w-full flex-col items-center justify-start gap-4">
