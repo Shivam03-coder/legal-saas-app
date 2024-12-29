@@ -58,8 +58,9 @@ const NavigationMenuBar = () => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
+        {/* Home // */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 bg-dark p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -102,26 +103,78 @@ const NavigationMenuBar = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 bg-dark p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+        {/* About Us */}
+
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
+              About Us
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
+        {/* Services */}
+
+        <NavigationMenuItem>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Services
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
+        {/* Blogs // */}
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Blogs</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 bg-dark p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <li className="row-span-3">
+                <NavigationMenuLink asChild>
+                  <a
+                    className="from-muted/50 flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b to-muted p-6 no-underline outline-none focus:shadow-md"
+                    href="/"
+                  >
+                    <Bot className="h-6 w-6" />
+                    <div className="mb-2 mt-4 text-lg font-medium">
+                      LegalHub
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-tight">
+                      Streamline legal case management with components built for
+                      efficiency and accuracy.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <ListItem href="/docs" title="Overview">
+                Explore the tools and features to manage cases, clients, and
+                legal workflows effectively.
+              </ListItem>
+              <ListItem href="/docs/installation" title="Setup Guide">
+                Step-by-step instructions to set up your legal management tool.
+              </ListItem>
+              <ListItem
+                href="/docs/primitives/case-management"
+                title="Case Management"
+              >
+                Organize, track, and update case details efficiently.
+              </ListItem>
+              <ListItem
+                href="/docs/primitives/documentation"
+                title="Document Management"
+              >
+                Manage and store legal documents securely.
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+        {/* Contact Us */}
+
+        <NavigationMenuItem>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contact Us
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

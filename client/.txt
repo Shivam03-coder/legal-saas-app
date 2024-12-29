@@ -1,0 +1,88 @@
+ <div className="flex flex-col items-center gap-5 text-center">
+          {/* Hero Section */}
+          <h1 className="font-lexend text-4xl font-bold text-gray-800">
+            Streamline Your Legal Work
+          </h1>
+          <p className="font-lexend text-lg text-gray-600">
+            Manage cases, clients, and documents effortlessly with our
+            all-in-one legal management tool.
+          </p>
+
+          {/* Features Section */}
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            {/* Feature 1 */}
+            <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-md">
+              <h3 className="mb-2 font-lexend text-xl font-semibold text-gray-700">
+                Case Management
+              </h3>
+              <p className="text-gray-600">
+                Organize and track case details, deadlines, and updates in one
+                place.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-md">
+              <h3 className="mb-2 font-lexend text-xl font-semibold text-gray-700">
+                Document Management
+              </h3>
+              <p className="text-gray-600">
+                Securely store, organize, and share legal documents with clients
+                and teams.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-md">
+              <h3 className="mb-2 font-lexend text-xl font-semibold text-gray-700">
+                Client Collaboration
+              </h3>
+              <p className="text-gray-600">
+                Communicate with clients seamlessly and keep them updated on
+                case progress.
+              </p>
+            </div>
+            {/* Feature 1 */}
+            <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-md">
+              <h3 className="mb-2 font-lexend text-xl font-semibold text-gray-700">
+                Case Management
+              </h3>
+              <p className="text-gray-600">
+                Organize and track case details, deadlines, and updates in one
+                place.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-md">
+              <h3 className="mb-2 font-lexend text-xl font-semibold text-gray-700">
+                Document Management
+              </h3>
+              <p className="text-gray-600">
+                Securely store, organize, and share legal documents with clients
+                and teams.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-md">
+              <h3 className="mb-2 font-lexend text-xl font-semibold text-gray-700">
+                Client Collaboration
+              </h3>
+              <p className="text-gray-600">
+                Communicate with clients seamlessly and keep them updated on
+                case progress.
+              </p>
+            </div>
+          </div>
+
+          {/* Call-to-Action */}
+          <div className="mt-10">
+            <a
+              href="/get-started"
+              className="rounded-md bg-blue-600 px-6 py-3 font-lexend text-white hover:bg-blue-700"
+            >
+              Get Started Now
+            </a>
+          </div>
+        </div>
