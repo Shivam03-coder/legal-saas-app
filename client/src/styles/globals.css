@@ -27,7 +27,7 @@
     --color-primary: #001f3f; /* Deep Blue - Primary background */
     --color-dark: #021526; /* Darker Blue - Headers or accents */
     --color-secondary: #f2f8ff; /* Light Blue - Secondary background */
-    --color-main: #3b82f6; /* Bright Blue - Buttons, links */
+    --color-main: #a7e2fd; /* light Blue - Buttons, links */
 
     /* Accent Colors */
     --color-accent-green: #22c55e; /* Success - Actions completed */
@@ -56,6 +56,8 @@
     --color-highlight: #fde047; /* Yellow - Important highlights */
     --color-muted: #9ca3af; /* Gray - Muted text or icons */
     --color-info: #0ea5e9; /* Sky Blue - Information alerts */
+
+    
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
