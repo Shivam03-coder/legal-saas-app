@@ -62,7 +62,7 @@ const NavigationMenuBar = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Home</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 bg-dark p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <ul className="grid gap-3 bg-secondary p-4 text-dark md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
@@ -118,7 +118,7 @@ const NavigationMenuBar = () => {
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Services
+              Services
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -128,7 +128,7 @@ const NavigationMenuBar = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Blogs</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 bg-dark p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <ul className="grid gap-3 bg-secondary p-4 text-dark md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
