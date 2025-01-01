@@ -39,7 +39,7 @@ const chartConfig = {
 
 export function WeeklyBars() {
   return (
-    <Card className="bg-white">
+    <Card className="bg-white max-w-sm ">
       <CardHeader>
         <CardTitle>Weekly Task Completion</CardTitle>
         <CardDescription>Tasks completed each day of the week</CardDescription>

@@ -43,7 +43,7 @@ const chartConfig = {
 
 export function YearlyGraph() {
   return (
-    <Card className="bg-white">
+    <Card className="max-w-sm bg-white">
       <CardHeader>
         <CardTitle>Task Completion Chart</CardTitle>
         <CardDescription>

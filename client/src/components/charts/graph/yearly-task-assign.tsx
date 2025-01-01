@@ -47,7 +47,7 @@ const chartConfig = {
 
 export function TaskManagementChart() {
   return (
-    <Card className="bg-white">
+    <Card className="max-w-sm bg-white">
       <CardHeader>
         <CardTitle>Task Management Overview</CardTitle>
         <CardDescription>
