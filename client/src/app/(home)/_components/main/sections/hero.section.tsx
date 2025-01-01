@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { LoaderPinwheel, PlayCircle } from "lucide-react";
 import Image from "next/image";
 import graph from "@/assets/imgs/graph.png";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const Router = useRouter();
   return (
     <>
       {/* Welcome Section */}
@@ -38,7 +40,11 @@ const Hero = () => {
           <Button className="text-secondary" aria-label="Try for Free">
             Try Free <LoaderPinwheel className="ml-2" />
           </Button>
-          <Button variant="outline" aria-label="View Demo">
+          <Button
+            onClick={() => Router.push("/user-dashboard")}
+            variant="outline"
+            aria-label="View Demo"
+          >
             <PlayCircle className="mr-2" /> View Demo
           </Button>
         </div>

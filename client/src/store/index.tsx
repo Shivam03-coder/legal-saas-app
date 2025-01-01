@@ -9,10 +9,10 @@ import {
 } from "react-redux";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { useRef } from "react";
-import { accountState } from "./states";
+import { globalSlice } from "./states/global";
 
 const rootReducer = combineReducers({
-  account: accountState.reducer,
+  global: globalSlice.reducer,
 });
 
 export const makeStore = () =>

@@ -37,6 +37,6 @@
     "**/*.cjs",
     "**/*.js",
     ".next/types/**/*.ts"
-  ],
+, "src/components/nav-bar"  ],
   "exclude": ["node_modules"]
 }
