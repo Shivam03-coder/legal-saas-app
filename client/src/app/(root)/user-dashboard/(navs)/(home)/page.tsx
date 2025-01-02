@@ -5,7 +5,7 @@ import { YearlyGraph } from "@/components/charts/graph/yearly-graph";
 import { TaskManagementChart } from "@/components/charts/graph/yearly-task-assign";
 import TimerTrackerCard from "./_components/time-tracker-card";
 import RemainingToDoCard from "./_components/remainining-todo-card";
-import TaskListTab from "./_components/task-list-tab";
+import TabList from "./_components/tabs-list";
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
           <TaskManagementChart />
           <RemainingToDoCard />
           <TimerTrackerCard />
-          <TaskListTab />
+          <TabList />
         </div>
       </div>
     </div>
