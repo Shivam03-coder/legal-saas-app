@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { cn } from "@/lib/utils"; // Utility function from Shadcn for conditional classnames.
 import { Card } from "@/components/ui/card";
@@ -10,6 +11,7 @@ type TaskCardProps = {
   status: "To Do" | "On Going" | "Completed";
   tasksCompleted: number;
   totalTasks: number;
+  setActiveCard: (active: any) => void;
 };
 
 export const TaskCard: React.FC<TaskCardProps> = ({
@@ -18,8 +20,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({
   category,
   dueDate,
   status,
-  tasksCompleted,
-  totalTasks,
+  setActiveCard,
 }) => {
   const priorityClasses = {
     High: "text-red-500",
@@ -35,6 +36,10 @@ export const TaskCard: React.FC<TaskCardProps> = ({
 
   return (
     <Card
+      id={status}
+      draggable
+      onDragStartCapture={() => setActiveCard(status)}
+      onDragEnd={() => setActiveCard(null)}
       className={cn("rounded-lg bg-white p-4 shadow-xl", statusClasses[status])}
     >
       <h3 className="text-lg font-semibold">{title}</h3>

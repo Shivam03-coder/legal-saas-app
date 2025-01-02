@@ -133,3 +133,98 @@
 .cl-userButtonPopoverCard {
   background-color: var(--color-secondary);
 }
+
+/*  REACT CALNDER */
+
+/* Header Styling */
+.rbc-toolbar {
+  @apply mb-4 flex items-center justify-between font-inter;
+}
+
+.rbc-toolbar-label {
+  @apply text-xl font-bold text-primary;
+}
+
+/* Weekday Headers */
+.rbc-header {
+  @apply rounded-lg border-b-0 bg-primary pb-4 text-center font-inter font-normal uppercase text-secondary;
+}
+
+/* Days in Month */
+.rbc-month-row {
+  @apply m-2 grid min-h-[140px] grid-cols-7 gap-2 rounded-lg border-0 bg-secondary transition-all hover:shadow;
+}
+
+.rbc-day-bg {
+  @apply rounded-lg border-none;
+}
+
+.rbc-off-range-bg {
+  @apply bg-gray-100 text-gray-400;
+}
+
+.rbc-current {
+  @apply rounded-lg border-2 border-primary bg-opacity-20;
+}
+
+.rbc-event-content {
+  @apply font-medium;
+}
+
+.rbc-event-label {
+  @apply font-lexend text-sm;
+}
+
+/* Today's Date */
+.rbc-today {
+  @apply rounded-lg border-[2px] border-primary bg-primary text-secondary;
+}
+
+/* Month View Days */
+.rbc-month-view {
+  @apply border-none;
+}
+
+.rbc-day-slot .rbc-time-slot {
+  @apply border-none;
+}
+
+/* Selected Range Styling */
+.rbc-selected-cell {
+  @apply rounded-lg bg-primary text-white;
+}
+
+/* Time Slot Styling */
+.rbc-time-view {
+  @apply bg-gray-50;
+}
+
+.rbc-time-content {
+  @apply border-t border-gray-200;
+}
+
+.rbc-time-header {
+  @apply font-lexend font-medium text-primary;
+}
+
+/* Buttons */
+.rbc-button-link {
+  @apply rounded bg-primary px-4 py-1 font-lexend;
+}
+
+/* Agenda View */
+.rbc-agenda-table {
+  @apply table-auto border-collapse;
+}
+
+.rbc-agenda-content {
+  @apply rounded-lg border bg-secondary;
+}
+
+.rbc-agenda-header {
+  @apply bg-gray-100 px-4 py-2 text-left font-semibold text-primary;
+}
+
+.rbc-agenda-event-cell {
+  @apply px-4 py-2 text-sm text-gray-700;
+}

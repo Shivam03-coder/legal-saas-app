@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import TaskCard from "./task-card";
 import { CircleCheck, Goal, Loader, Plus } from "lucide-react";
 
@@ -141,10 +142,19 @@ const dummyData = [
 ];
 
 const TaskAll = () => {
+  const [ActiveCard, setActiveCard] = useState<string | null>(null);
+
+  const getBackgroundColor = (status: string) => {
+    return ActiveCard === status ? "#a7e2fd" : "#d1d5db";
+  };
+
   return (
     <div className="page grid gap-3 p-4 md:grid-cols-3">
       {/* TO DO */}
-      <section className="flex flex-col gap-4 rounded-lg bg-gray-300 p-4">
+      <section
+        style={{ backgroundColor: getBackgroundColor("To Do") }}
+        className="flex flex-col gap-4 rounded-lg p-4"
+      >
         <header className="flex w-full items-center justify-between">
           <span className="flex items-center gap-2">
             <Loader />
@@ -159,6 +169,7 @@ const TaskAll = () => {
           .map((task, index) => (
             <TaskCard
               key={index}
+              setActiveCard={setActiveCard}
               title={task.title}
               priority={task.priority as "High" | "Medium" | "Low"}
               category={task.category}
@@ -171,7 +182,10 @@ const TaskAll = () => {
       </section>
 
       {/* ON GOING */}
-      <section className="flex flex-col gap-4 rounded-lg bg-gray-300 p-4">
+      <section
+        style={{ backgroundColor: getBackgroundColor("On Going") }}
+        className="flex flex-col gap-4 rounded-lg p-4"
+      >
         <header className="flex w-full items-center justify-between">
           <span className="flex items-center gap-2">
             <Goal />
@@ -186,6 +200,7 @@ const TaskAll = () => {
           .map((task, index) => (
             <TaskCard
               key={index}
+              setActiveCard={setActiveCard}
               title={task.title}
               priority={task.priority as "High" | "Medium" | "Low"}
               category={task.category}
@@ -198,10 +213,13 @@ const TaskAll = () => {
       </section>
 
       {/* COMPLETED */}
-      <section className="flex flex-col gap-4 rounded-lg bg-gray-300 p-4">
+      <section
+        style={{ backgroundColor: getBackgroundColor("Completed") }}
+        className="flex flex-col gap-4 rounded-lg p-4"
+      >
         <header className="flex w-full items-center justify-between">
           <span className="flex items-center gap-2">
-          <CircleCheck />
+            <CircleCheck />
             <h6 className="font-semibold">Completed</h6>
           </span>
           <button>
@@ -212,6 +230,7 @@ const TaskAll = () => {
           .filter((task) => task.status === "Completed")
           .map((task, index) => (
             <TaskCard
+              setActiveCard={setActiveCard}
               key={index}
               title={task.title}
               priority={task.priority as "High" | "Medium" | "Low"}
