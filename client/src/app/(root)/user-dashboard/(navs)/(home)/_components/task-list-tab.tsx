@@ -3,8 +3,8 @@ import React from "react";
 import TaskAll from "./tabs/task-all";
 import TaskSearch from "./task-tab-btn";
 import TaskTabsBtn from "./task-tab-btn";
-import MyTask from "./tabs/my-task";
 import DueTask from "./tabs/due-task";
+import MyTask from "./tabs/my-task";
 
 const TaskListTab = () => {
   return (

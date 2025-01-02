@@ -1,11 +1,13 @@
+"use client";
 import { useEffect, useState } from "react";
 
-const useMount = () => {
-  const [isMount, setisMount] = useState<boolean>(true);
-  useEffect(() => {
-    setisMount(false);
-  }, []);
-  return isMount;
-};
+const useMounted = () => {
+  const [mounted, setMounted] = useState(false);
 
-export default useMount;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return mounted;
+};
+export default useMounted;
