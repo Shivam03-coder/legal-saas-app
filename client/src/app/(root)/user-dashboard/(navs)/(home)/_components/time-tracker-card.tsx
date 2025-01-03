@@ -85,7 +85,7 @@ const TimerTrackerCard = () => {
           <span className="font-semibold">{formatTime(time)} / 03:00:00</span>
         </div>
         {/* <button
-          onClick={handleReset}
+          onClick={handleReset}  
           className="mt-2 w-full rounded-lg bg-gray-300 py-2 text-sm text-gray-800"
         >
           <X className="mr-2 inline h-4 w-4" /> Reset Timer
