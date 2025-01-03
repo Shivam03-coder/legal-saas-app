@@ -32,7 +32,6 @@ export function NavTasks() {
   const projects = [
     { name: "Home", url: "/user-dashboard/", icon: Home },
     { name: "My Tasks", url: "/user-dashboard//tasks", icon: BookCheck },
-    { name: "Inbox", url: "/user-dashboard/inbox", icon: Inbox },
     { name: "Calendar", url: "/user-dashboard/calendar", icon: Calendar },
     {
       name: "Reports & Analysis",
