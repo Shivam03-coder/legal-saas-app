@@ -30,17 +30,17 @@ function FormDialog() {
 
         return (
           <Dialog open={isOpen} onOpenChange={() => handleClose(key)} key={key}>
-            <DialogContent className="bg-secondary">
+            <DialogContent className="h-[90vh] md:min-w-[40%] overflow-auto bg-secondary">
               <DialogHeader>
-                <DialogTitle className="uppercase">{key.replace("form", "")} Form</DialogTitle>
+                <DialogTitle className="text-center uppercase">
+                  {key.replace("form", "")} Form
+                </DialogTitle>
               </DialogHeader>
               <div>
                 {FormComponent ? <FormComponent /> : <div>No Form Found</div>}
               </div>
               <DialogFooter>
-                <Button variant="secondary" onClick={() => handleClose(key)}>
-                  Close
-                </Button>
+                <Button onClick={() => handleClose(key)}>Close</Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
