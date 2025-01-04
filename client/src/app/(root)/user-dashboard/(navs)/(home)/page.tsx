@@ -6,6 +6,7 @@ import { TaskManagementChart } from "@/components/charts/graph/yearly-task-assig
 import TimerTrackerCard from "./_components/time-tracker-card";
 import RemainingToDoCard from "./_components/remainining-todo-card";
 import TabList from "./_components/tabs-list";
+import Taskdetailsmaxview from "./_components/add-task-btn";
 
 const Home = () => {
   return (

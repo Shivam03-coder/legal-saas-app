@@ -1,9 +1,12 @@
-import React from 'react'
+import TaskTable from "@/lib/mui-tabels/task-tabel";
+import React from "react";
 
-const Tasks = () => {
+const Task = () => {
   return (
-    <div>Tasks</div>
-  )
-}
+    <div className="page">
+      <TaskTable />
+    </div>
+  );
+};
 
-export default Tasks
+export default Task;

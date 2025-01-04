@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Filter, Plus, Search, SortAscIcon, SortDescIcon } from "lucide-react";
 import React from "react";
+import AddTaskBtn from "./add-task-btn";
 
 const TaskTabsBtn = () => {
   return (
@@ -9,7 +10,7 @@ const TaskTabsBtn = () => {
       <TaskSearch />
       <FilterButton />
       <SortByButton />
-      <AddNewTask />
+      <AddTaskBtn />
     </div>
   );
 };
@@ -40,15 +41,6 @@ const SortByButton = () => {
     <Button className="bg-white">
       <SortAscIcon />
       Sort By
-    </Button>
-  );
-};
-
-const AddNewTask = () => {
-  return (
-    <Button className="bg-highlight">
-      <Plus />
-      Add New Task
     </Button>
   );
 };

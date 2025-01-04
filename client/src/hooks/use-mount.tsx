@@ -1,13 +1,16 @@
 "use client";
 import { useEffect, useState } from "react";
+import { boolean } from "zod";
 
-const useMounted = () => {
-  const [mounted, setMounted] = useState(false);
+const useMount = () => {
+  const [isMounted, setIsMounted] = useState(false); // Corrected naming convention for readability
 
   useEffect(() => {
-    setMounted(true);
+    setIsMounted(true); // Set the state to true when the component mounts
+    return () => setIsMounted(false); // Clean up by setting it to false on unmount
   }, []);
 
-  return mounted;
+  return isMounted;
 };
-export default useMounted;
+
+export default useMount;
