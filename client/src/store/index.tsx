@@ -10,9 +10,11 @@ import {
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { useRef } from "react";
 import { globalSlice } from "./states/global";
+import { formSlice } from "./states/form";
 
 const rootReducer = combineReducers({
   global: globalSlice.reducer,
+  form: formSlice.reducer,
 });
 
 export const makeStore = () =>

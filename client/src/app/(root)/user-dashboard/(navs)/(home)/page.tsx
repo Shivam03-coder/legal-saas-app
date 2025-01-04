@@ -1,5 +1,5 @@
 import React from "react";
-import PageHaeder from "./_components/PageHaeder";
+import PageHaeder from "./_components/page-header";
 import { WeeklyBars } from "@/components/charts/graph/weekly-bar";
 import { YearlyGraph } from "@/components/charts/graph/yearly-graph";
 import { TaskManagementChart } from "@/components/charts/graph/yearly-task-assign";

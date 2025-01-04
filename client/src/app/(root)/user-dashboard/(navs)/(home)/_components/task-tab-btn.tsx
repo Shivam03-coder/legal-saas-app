@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Filter, Plus, Search, SortAscIcon, SortDescIcon } from "lucide-react";
 import React from "react";
 import AddTaskBtn from "./add-task-btn";
+import FormDialog from "./add-task-btn/form-dialog";
 
 const TaskTabsBtn = () => {
   return (
@@ -11,6 +12,8 @@ const TaskTabsBtn = () => {
       <FilterButton />
       <SortByButton />
       <AddTaskBtn />
+      {/* FORMS  */}
+      <FormDialog />
     </div>
   );
 };
