@@ -12,7 +12,7 @@ import {
 
 const CompanyForm = () => {
   return (
-    <div className="flex flex-col gap-4 p-7">
+    <div className="flex flex-col gap-7 p-7">
       {/* Company Name */}
       <div className="flex flex-col gap-2">
         <Label htmlFor="name">Name *</Label>

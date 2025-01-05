@@ -17,7 +17,7 @@ import { useAppDispatch } from "@/store";
 // AddTaskBtn component
 function AddTaskBtn() {
   const dispatch = useAppDispatch();
-  
+
   // Manage the selected value for the dropdown
   const [selectedValue, setSelectedValue] = React.useState<string>("");
 
@@ -25,11 +25,7 @@ function AddTaskBtn() {
   const handleValueChange = (value: string) => {
     setSelectedValue(value); // Update selected value in state
     dispatch(toggleform(`${value}form`)); // Dispatch to toggle the form
-  };
-
-  // Handle closing of the dialog and reset the value
-  const handleCloseDialog = () => {
-    setSelectedValue(""); // Reset selected value when closing the dialog
+    setSelectedValue(""); // Reset Value of selected feild
   };
 
   return (

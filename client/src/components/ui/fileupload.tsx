@@ -27,8 +27,10 @@ const secondaryVariant = {
 
 export const FileUpload = ({
   onChange,
+  title,
 }: {
   onChange?: (files: File[]) => void;
+  title?: string;
 }) => {
   const [files, setFiles] = useState<File[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -68,7 +70,7 @@ export const FileUpload = ({
 
         <div className="flex flex-col items-center justify-center">
           <p className="relative z-20 font-sans text-base font-bold text-neutral-700 dark:text-neutral-300">
-            Upload file
+          {title || "Upload File"}
           </p>
           <p className="relative z-20 mt-2 font-sans text-base font-normal text-neutral-400 dark:text-neutral-400">
             Drag or drop your files here or click to upload
@@ -145,9 +147,9 @@ export const FileUpload = ({
                     className="flex flex-col items-center text-secondary"
                   >
                     Drop it
-                    <IconUpload className="h-8 w-8 text-secondary " />
+                    <IconUpload className="h-8 w-8 text-secondary" />
                   </motion.p>
-                ) : ( 
+                ) : (
                   <IconUpload className="h-8 w-8 text-secondary" />
                 )}
               </motion.div>

@@ -30,13 +30,13 @@ function FormDialog() {
 
         return (
           <Dialog open={isOpen} onOpenChange={() => handleClose(key)} key={key}>
-            <DialogContent className="h-[90vh] md:min-w-[40%] overflow-auto bg-secondary">
-              <DialogHeader>
+            <DialogContent className="w-[96%] bg-white md:min-w-[43%]">
+              <DialogHeader className="sticky left-0 top-0 ">
                 <DialogTitle className="text-center uppercase">
                   {key.replace("form", "")} Form
                 </DialogTitle>
               </DialogHeader>
-              <div>
+              <div className="max-h-[70vh] overflow-auto">
                 {FormComponent ? <FormComponent /> : <div>No Form Found</div>}
               </div>
               <DialogFooter>
